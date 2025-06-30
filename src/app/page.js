@@ -1,95 +1,77 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import 'animate.css/animate.min.css';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <main>
+      <Navbar />
+      <section className="titleSection deepPadding flex-2">
+        <div>
+          <h1 className="title animate__animated animate__pulse animate__slower animate__delay-2s">EMPOWER DESIGNERS, NOT REPLACE THEM</h1>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div style={{ width: "100%" }}>
+          <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+          <model-viewer
+            src="/front-model-3.glb"
+            camera-controls
+            camera-orbit="0deg 75deg 10m"
+            tone-mapping="neutral"
+            poster="/front-model-poster.png"
+            shadow-intensity="1"
+            autoplay
+            ar
+            interaction-prompt="none"
+            reveal="auto"
+            style={{ width: "100%", height: "100%", display: "block" }}
           />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+      <section className="deepPadding dark" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
+        <p className="large center">In a rapidly-changing world, AI is finding purpose. From writing prompts to making artificial imagery, designers are valued in all aspects. PyroArt looks forward to just that.</p>
+      </section>
+      <section className="flex-2">
+        <div className="larger">
+          <h2>WHAT IS IN IT FOR YOU?</h2>
+          <p>Machine-generated art is well utilised when wanting a professional approach. While it makes work really fast, it also emphasises detail and brings a good look to a project. The better the prompt, the grander the results.</p>
+        </div>
+        <div className="smaller">
+          <img src="./overview/artificial_horror.png" style={{ width: "100%", height: "auto" }} />
+        </div>
+      </section>
+      <section>
+        <h2>HAVE A QUICK GLANCE</h2>
+        <div className="flex-3">
+          <div style={{
+            backgroundImage: `url(/overview/kintsugi.webp)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "#808080",
+            height: "400px"
+          }}>
+          </div>
+          <div style={{
+            backgroundImage: `url(/overview/eros_and_pysche.jpg)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "#808080",
+            height: "400px"
+          }}>
+          </div>
+          <div style={{
+            backgroundImage: `url(/overview/the_moon_goddess_and_the_fire_god.jpg)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "#808080",
+            height: "400px"
+          }}>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </main>
   );
 }
