@@ -1,6 +1,7 @@
 import { ThemeProvider } from './contexts/Theme';
 import { Lexend_Deca, Unbounded } from 'next/font/google';
 import './globals.css';
+import Script from 'next/script';
 
 const textFont = Lexend_Deca({
   variable: '--font-lexend-deca',
@@ -19,7 +20,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon-16x16.ico" sizes="16x16" />
         <link rel="icon" href="/favicon-32x32.ico" sizes="32x32" />
         <link rel="icon" href="/favicon-64x64.ico" sizes="64x64" />
-        <script
+        <Script strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
