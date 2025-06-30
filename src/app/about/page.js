@@ -18,6 +18,9 @@ export default function About() {
         <div>
           <b>PyroArt</b> is a well-curated gallery of art and credits artificial intelligence (AI) image designers. It explores what AI image generation is and offers resources for the same. Machine-generated imagery is possible thanks to certain generative AI skilled enough to produce visual content. In simpler terms, AI image generators create images based on a set of examples. This has brought about a wave of artists who are creatively expressing themselves through the world of digital art. These artworks are spectacular and breathtaking!
         </div>
+        <div>
+          The AI generation has become an enhancing and powerful tool for artists and designers. But, with its advancement comes issues of copyright and creativity. By using data responsibly and by understanding and learning copyright law, we can utilise AI technology to create innovative artwork. AI also has a great impact on the art community and creative ideas. Artists can use AI generated images for inspiration for new artworks and expand their ideas, which can help in the creation of new styles and concepts that humans could have never thought of before!
+        </div>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "5em" }}>
           <img src={theme == 'dark' ? '/logo-light.png' : '/logo-dark.png'} style={{ width: "80%" }}></img>
         </div>
